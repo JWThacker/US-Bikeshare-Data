@@ -154,8 +154,9 @@ def user_stats(df,city):
 
     #Display counts of user types
     labels = df['User Type'].value_counts().keys().tolist()
+    n_labels = range(len(labels))
     valueCounts = df['User Type'].value_counts()
-    for i in range(len(labels)):
+    for i in n_labels:
         print('The number of ',labels[i]+'s',' is ',valueCounts[labels[i]])
     
     print('\n')
@@ -164,8 +165,9 @@ def user_stats(df,city):
     else:
     #Display counts of gender
         genderLabels = df['Gender'].value_counts().keys().tolist()
+        n_genderLabels = range(len(genderLabels))
         genderValueCounts = df['Gender'].value_counts()
-        for i in range(len(genderLabels)):
+        for i in n_genderLabels:
             print('The number of ',genderLabels[i] + 's is ',genderValueCounts[genderLabels[i]])
 
         print('\n')
