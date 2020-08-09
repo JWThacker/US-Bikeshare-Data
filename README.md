@@ -11,5 +11,5 @@ This project computes descriptive statistics on bikeshare data from three differ
 bikeshare.py, chicago.csv, washington.csv, new_york_city_csv
 
 ### Credits
-This project was complete as part of the requirements for the "Programming for Data Science" nanodegree.
+This project was complete as part of the requirements for the [Programming for Data Science nanodegree](https://www.udacity.com/course/programming-for-data-science-nanodegree--nd104) 
 
