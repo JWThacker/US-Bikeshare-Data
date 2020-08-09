@@ -155,20 +155,20 @@ def user_stats(df,city):
     #Display counts of user types
     labels = df['User Type'].value_counts().keys().tolist()
     n_labels = range(len(labels))
-    valueCounts = df['User Type'].value_counts()
+    value_counts = df['User Type'].value_counts()
     for i in n_labels:
-        print('The number of ',labels[i]+'s',' is ',valueCounts[labels[i]])
+        print('The number of ',labels[i]+'s',' is ',value_counts[labels[i]])
     
     print('\n')
     if city == 'washington':
         print("Washington has neither a 'gender' nor 'birth year' attribute. ")
     else:
     #Display counts of gender
-        genderLabels = df['Gender'].value_counts().keys().tolist()
-        n_genderLabels = range(len(genderLabels))
-        genderValueCounts = df['Gender'].value_counts()
-        for i in n_genderLabels:
-            print('The number of ',genderLabels[i] + 's is ',genderValueCounts[genderLabels[i]])
+        gender_labels = df['Gender'].value_counts().keys().tolist()
+        n_gender_labels = range(len(gender_labels))
+        gender_value_counts = df['Gender'].value_counts()
+        for i in n_gender_labels:
+            print('The number of ',gender_labels[i] + 's is ',gender_value_counts[gender_labels[i]])
 
         print('\n')
         
@@ -184,8 +184,8 @@ def user_stats(df,city):
 
 def main():
     while True:
-        userInput = True
-        while userInput:
+        user_input = True
+        while user_input:
             city, month, day = get_filters()
             df = load_data(city, month, day)
             try:
@@ -201,9 +201,9 @@ def main():
             try:
                 answer = input("Would you like to apply a different filter an see more lines of the data (type: Yes or No)?").lower()
                 if answer == 'yes':
-                    userInput = True
+                    user_input = True
                 else:
-                    userInput = False
+                    user_input = False
             except KeyboardInterrupt:
                 Print('Program terminated')
                 exit()
